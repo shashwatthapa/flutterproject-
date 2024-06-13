@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
@@ -81,7 +82,7 @@ class Dashboard extends StatelessWidget {
                   leading: Icon(Icons.home),
                   trailing: Icon(Icons.visibility),
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(
+                    Navigator.push(context, CupertinoPageRoute(
                       builder: (ctx) {
                         return Profile();
                       },

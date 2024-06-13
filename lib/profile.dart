@@ -6,14 +6,21 @@ class Profile extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: (){
+
+          },
+          icon: Icon(Icons.arrow_back),
+        ),
         title: Text(
           "Profile",
           style:TextStyle(
            color: Colors.white,
-           backgroundColor: Colors.green,
 
         ),
         ),
+        backgroundColor: Colors.green,
+
       ),
       body:Center(
         child: Text("Profile"),
