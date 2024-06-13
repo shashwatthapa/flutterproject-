@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
+import 'profile.dart';
+
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
 
@@ -74,12 +76,17 @@ class Dashboard extends StatelessWidget {
               ),
               Card(
                 child: ListTile(
-                  title: Text("Home page"),
-                  subtitle: Text("Go to homepage"),
+                  title: Text("Profile page"),
+                  subtitle: Text("Go to profile"),
                   leading: Icon(Icons.home),
                   trailing: Icon(Icons.visibility),
                   onTap: () {
-                    print("Home page menu clicked");
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (ctx) {
+                        return Profile();
+                      },
+                    ));
+                    print("Profile page menu clicked");
                   },
                 ),
               ),
@@ -92,7 +99,7 @@ class Dashboard extends StatelessWidget {
                     Text("Expanded data"),
                     Container(
                       height: 1000,
-                      color:Colors.green,
+                      color: Colors.green,
                     )
                   ],
                 ),
