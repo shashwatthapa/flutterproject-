@@ -5,26 +5,23 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: (){
-
-          },
-          icon: Icon(Icons.arrow_back),
+        appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.arrow_back),
+          ),
+          title: Text(
+            "Profile",
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
+          backgroundColor: Colors.green,
         ),
-        title: Text(
-          "Profile",
-          style:TextStyle(
-           color: Colors.white,
-
-        ),
-        ),
-        backgroundColor: Colors.green,
-
-      ),
-      body:Center(
-        child: Text("Profile"),
-      )
-    );
+        body: Center(
+          child: Text("Profile"),
+        ));
   }
 }
